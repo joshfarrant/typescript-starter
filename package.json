@@ -1,0 +1,51 @@
+{
+  "name": "@joshfarrant/typescript-starter",
+  "version": "0.0.1",
+  "description": "A TypeScript starter with tests and linting and stuff",
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 12"
+  },
+  "devDependencies": {
+    "@types/jest": "~24.0.0",
+    "@types/node": "^12.0.2",
+    "coveralls": "^3.0.2",
+    "husky": "^1.1.4",
+    "jest": "^24.3.0",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-microsoft-contrib": "~6.1.0",
+    "tsutils": "~3.9.0",
+    "typescript": "~3.3.1"
+  },
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "start": "node build/index.js",
+    "clean": "rimraf coverage build tmp",
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "lint": "tslint -t stylish --project \"tsconfig.json\"",
+    "test": "npm run lint && jest --coverage",
+    "test:watch": "jest --watch",
+    "preversion": "npm run clean && npm test",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags"
+  },
+  "author": {
+    "name": "Josh Farrant",
+    "email": "josh@farrant.me",
+    "url": "https://farrant.me"
+  },
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@nimvelo/phone-api-client": "^1.5.3",
+    "inquirer": "^6.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && npm test"
+    }
+  }
+}
