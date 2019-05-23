@@ -40,8 +40,6 @@
   },
   "license": "GPL-3.0",
   "dependencies": {
-    "@nimvelo/phone-api-client": "^1.5.3",
-    "inquirer": "^6.3.1"
   },
   "husky": {
     "hooks": {
