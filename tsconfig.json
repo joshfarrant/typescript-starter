@@ -6,7 +6,6 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "importHelpers": true,
-    "jsx": "react",
     "alwaysStrict": true,
     "sourceMap": true,
     "declaration": true,
@@ -17,8 +16,5 @@
     "noUnusedParameters": true,
     "strict": true
   },
-  "include": [
-    "src/**/*",
-    "__tests__/**/*"
-  ]
+  "include": ["src/**/*", "__tests__/**/*"]
 }

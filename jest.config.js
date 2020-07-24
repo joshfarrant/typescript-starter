@@ -5,9 +5,7 @@ module.exports = {
   },
   moduleFileExtensions: [
     "ts",
-    "tsx",
     "js",
-    "jsx",
     "json",
     "node",
   ],
@@ -17,7 +15,7 @@ module.exports = {
   ],
   coverageDirectory: 'coverage',
   collectCoverageFrom: [
-    'src/**/*.{ts,tsx,js,jsx}',
+    'src/**/*.{ts,js}',
     '!src/**/*.d.ts',
   ],
 };
